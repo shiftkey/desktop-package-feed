@@ -1,12 +1,30 @@
 {
   "name": "desktop-package-feed",
   "version": "1.0.0",
-  "description": "",
+  "description": "An experiment to configure and host packages on an Ubuntu machine",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "init": "node index.js init",
+    "update": "node index.js update",
+    "lint": "prettier --write **/*.js **/*.json *.js *.md",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@octokit/rest": "^18.3.5",
+    "dns-fast-resolver": "^1.0.1",
+    "execa": "^5.0.0",
+    "fs-extra": "^9.1.0",
+    "hasha": "^5.2.2",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "temp": "^0.9.4",
+    "yargs": "^16.2.0"
+  },
+  "engines": {
+    "node": ">=15"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "RPL"
 }
